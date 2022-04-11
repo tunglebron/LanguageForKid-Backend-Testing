@@ -1,7 +1,7 @@
 # LanguageForKid-Backend-Testing
 
-NodeJS
-Express
+NodeJS,
+Express,
 Microsoft SQL Server
 
 npm install express --save
