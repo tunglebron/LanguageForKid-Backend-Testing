@@ -1,9 +1,12 @@
-var getAllBigList = require('../controllers/BigListController');
+var bigListController = require('../controllers/BigListController');
 var detailController = require('../controllers/DetailController');
+var userController = require('../controllers/UserController');
 var express = require('express');
 var router = express.Router();
 
-router.get('/bigList', getAllBigList);
+router.post('/user/register', userController.register);
+
+router.get('/bigList', bigListController.getAllBigList);
 
 router.get('/detail', detailController.getDetails);
 

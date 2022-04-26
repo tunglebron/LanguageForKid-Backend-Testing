@@ -1,10 +1,12 @@
-var modelDetail = require('./../models/Detail');
+var modelDetail = require("./../models/Detail");
 
 var getItemsByFilter = (req, res) => {
   let filterByName = req.params.name;
 
   if (!filterByName) {
-    res.status(400).send({ error: true, message: 'Please provide filter name' });
+    res
+      .status(400)
+      .send({ error: true, message: "Please provide filter name" });
   }
 
   let param = "";
@@ -46,34 +48,28 @@ var getItemsByFilter = (req, res) => {
   }
 
   if (param != "" && param != "-1") {
-    modelDetail.allItemsById(param, function(result) {
+    modelDetail.allItemsById(param, function (result) {
       res.status(200).json(result);
-    })
+    });
   } else {
-    res.status(400).send({ error: true, message: 'Invalid filter name' });
+    res.status(400).send({ error: true, message: "Invalid filter name" });
   }
-}
+};
 
 var getDetails = (req, res) => {
-  modelDetail.allItems(function(result) {
+  modelDetail.allItems(function (result) {
     res.status(200).json(result);
-  })
-}
+  });
+};
 
 var getRandom = (req, res) => {
-
-  modelDetail.randomItems(function(result) {
+  modelDetail.randomItems(function (result) {
     res.status(200).json(result);
-  })
-
-}
+  });
+};
 
 module.exports = {
   getItemsByFilter: getItemsByFilter,
   getDetails: getDetails,
-  getRandom: getRandom
-}
-
-
-
-
+  getRandom: getRandom,
+};

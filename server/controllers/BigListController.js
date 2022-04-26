@@ -6,4 +6,6 @@ function getAllBigList(req, res) {
   })
 }
 
-module.exports = getAllBigList;
+module.exports = {
+  getAllBigList
+}

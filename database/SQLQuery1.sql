@@ -24,6 +24,19 @@ CREATE TABLE DETAIL(
 	sound_link TEXT
 )
 
+CREATE TABLE Account (
+  id INTEGER IDENTITY PRIMARY KEY,
+  username varchar(50) NOT NULL,
+  password varchar(255) NOT NULL,
+  email varchar(100) NOT NULL
+)
+
+INSERT INTO Account(username, password, email) VALUES ('user1', '12345678', 'user1@user.com');
+
+--SELECT * FROM Account where username = 'user12' or email = 'user1@user.com2'
+
+--SELECT * FROM Account WHERE username = 'user1' AND password = '12345678'
+
 INSERT INTO BIGLIST(Name, Image, Sound)VALUES('BẢNG CHỮ CÁI', 'img_alphabet_a', 'sounds_start_bangchucai');
 INSERT INTO BIGLIST(Name, Image, Sound)VALUES('CHỮ SỐ', 'img_number_0', 'sounds_start_chuso');
 INSERT INTO BIGLIST(Name, Image, Sound)VALUES('ĐỘNG VẬT', 'img_animal_ant', 'sounds_start_cacloaidongvat');
