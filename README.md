@@ -1,5 +1,4 @@
 # LanguageForKid-Backend
-# Vietnamese learning applications for children with images and sounds - Back end source
 
 NodeJS,
 Express,
@@ -13,3 +12,5 @@ GET http://localhost:3001/api/v1/detail/random
 
 API For User Information
 POST http://localhost:3001/api/v1/user/register
+
+# Vietnamese learning applications for children with images and sounds - Back end source
