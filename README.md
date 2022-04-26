@@ -1,16 +1,16 @@
 # LanguageForKid-Backend
 
-NodeJS,
-Express,
-Microsoft SQL Server
+NodeJS, <br />
+Express, <br />
+Microsoft SQL Server <br />
 
-API For Question
-GET http://localhost:3001/api/v1/bigList 
-GET http://localhost:3001/api/v1/detail
-GET http://localhost:3001/api/v1/detail/filter=:name
-GET http://localhost:3001/api/v1/detail/random
+API For Question <br />
+GET http://localhost:3001/api/v1/bigList  <br />
+GET http://localhost:3001/api/v1/detail <br />
+GET http://localhost:3001/api/v1/detail/filter=:name <br />
+GET http://localhost:3001/api/v1/detail/random <br />
 
-API For User Information
+API For User Information <br />
 POST http://localhost:3001/api/v1/user/register
 
-# Vietnamese learning applications for children with images and sounds - Back end source
+
