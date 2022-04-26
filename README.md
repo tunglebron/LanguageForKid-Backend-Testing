@@ -1,14 +1,15 @@
-# LanguageForKid-Backend-Testing
+# LanguageForKid-Backend
+# Vietnamese learning applications for children with images and sounds - Back end source
 
 NodeJS,
 Express,
 Microsoft SQL Server
 
-npm install express --save
+API For Question
+GET http://localhost:3001/api/v1/bigList 
+GET http://localhost:3001/api/v1/detail
+GET http://localhost:3001/api/v1/detail/filter=:name
+GET http://localhost:3001/api/v1/detail/random
 
-npm install --save mssql
-
-npm install body-parser --save
-
-npm install morgan --save
-
+API For User Information
+POST http://localhost:3001/api/v1/user/register
