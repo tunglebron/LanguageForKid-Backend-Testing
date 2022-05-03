@@ -1,13 +1,30 @@
 var modelDetail = require("./../models/Detail");
 
-var getItemsByFilter = (req, res) => {
-  let filterByName = req.params.name;
-
-  if (!filterByName) {
-    res
-      .status(400)
-      .send({ error: true, message: "Please provide filter name" });
+var detailFilterNoParam = (req, res, next) => {
+  let filterByName = req.query.name;
+  if (filterByName == undefined || filterByName == null) {
+    res.error({
+      errors: {},
+      code: 400,
+      message: "No filter name provided",
+      result: {},
+    });
+  } else {
+    next();
   }
+};
+
+var detailInvalidFilter = (req, res, next) => {
+  res.error({
+    errors: {},
+    code: 400,
+    message: "Invalid filter name",
+    result: {},
+  });
+}
+
+var getItemsByFilter = (req, res, next) => {
+  let filterByName = req.query.name;
 
   let param = "";
 
@@ -49,22 +66,46 @@ var getItemsByFilter = (req, res) => {
 
   if (param != "" && param != "-1") {
     modelDetail.allItemsById(param, function (result) {
-      res.status(200).json(result);
+      res.success({
+        result: {
+          data: result.recordset,
+          output: result.output,
+          rowsAffected: result.rowsAffected,
+        },
+        code: 200,
+        message: "",
+      });
     });
   } else {
-    res.status(400).send({ error: true, message: "Invalid filter name" });
+    next();
   }
 };
 
 var getDetails = (req, res) => {
   modelDetail.allItems(function (result) {
-    res.status(200).json(result);
+    res.success({
+      result: {
+        data: result.recordset,
+        output: result.output,
+        rowsAffected: result.rowsAffected,
+      },
+      code: 200,
+      message: "",
+    });
   });
 };
 
 var getRandom = (req, res) => {
   modelDetail.randomItems(function (result) {
-    res.status(200).json(result);
+    res.success({
+      result: {
+        data: result.recordset,
+        output: result.output,
+        rowsAffected: result.rowsAffected,
+      },
+      code: 200,
+      message: "",
+    });
   });
 };
 
@@ -72,4 +113,6 @@ module.exports = {
   getItemsByFilter: getItemsByFilter,
   getDetails: getDetails,
   getRandom: getRandom,
+  detailFilterNoParam: detailFilterNoParam,
+  detailInvalidFilter: detailInvalidFilter,
 };

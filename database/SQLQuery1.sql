@@ -26,16 +26,11 @@ CREATE TABLE DETAIL(
 
 CREATE TABLE Account (
   id INTEGER IDENTITY PRIMARY KEY,
-  username varchar(50) NOT NULL,
-  password varchar(255) NOT NULL,
-  email varchar(100) NOT NULL
+  username varchar(50),
+  password varchar(255),
+  email varchar(100),
+  refreshToken text
 )
-
-INSERT INTO Account(username, password, email) VALUES ('user1', '12345678', 'user1@user.com');
-
---SELECT * FROM Account where username = 'user12' or email = 'user1@user.com2'
-
---SELECT * FROM Account WHERE username = 'user1' AND password = '12345678'
 
 INSERT INTO BIGLIST(Name, Image, Sound)VALUES('BẢNG CHỮ CÁI', 'img_alphabet_a', 'sounds_start_bangchucai');
 INSERT INTO BIGLIST(Name, Image, Sound)VALUES('CHỮ SỐ', 'img_number_0', 'sounds_start_chuso');
