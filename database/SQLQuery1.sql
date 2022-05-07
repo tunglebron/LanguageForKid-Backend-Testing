@@ -43,113 +43,113 @@ INSERT INTO BIGLIST(Name, Image, Sound)VALUES('CÁC LOẠI HOA', 'img_flower_apr
 INSERT INTO BIGLIST(Name, Image, Sound)VALUES('GIAO THÔNG', 'img_vehicle_ambulance', 'sounds_start_phuongtiengiaothong');
 INSERT INTO BIGLIST(Name, Image, Sound)VALUES('QUỐC GIA', 'img_country_vietnam', 'sounds_start_quocgia');
 
-INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
-VALUES(1, 'img_alphabet_a', 'sounds_alphabet_a', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_a.mp3?alt=media&token=f9ed9c96-6348-4618-b277-5ba81660b064');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, image_link, sound_link)
+VALUES(1, 'img_alphabet_a', 'sounds_alphabet_a', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/image%2Fimg_alphabet_a.png?alt=media&token=63be7b0a-ea09-4058-a40f-94d23223cf46' ,'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_a.mp3?alt=media&token=f9ed9c96-6348-4618-b277-5ba81660b064');
 INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
 VALUES(1, 'img_alphabet_b', 'sounds_alphabet_b', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_a1.mp3?alt=media&token=9364db9c-5d1a-4fa6-b639-a9d8308ba493');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_c', 'sounds_alphabet_c');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_d', 'sounds_alphabet_d');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_e', 'sounds_alphabet_e');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_g', 'sounds_alphabet_g');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_h', 'sounds_alphabet_h');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_i', 'sounds_alphabet_i');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_k', 'sounds_alphabet_k');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_l', 'sounds_alphabet_l');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_m', 'sounds_alphabet_m');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_n', 'sounds_alphabet_n');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_o', 'sounds_alphabet_o');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_p', 'sounds_alphabet_p');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_q', 'sounds_alphabet_q');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_r', 'sounds_alphabet_r');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_s', 'sounds_alphabet_s');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_t', 'sounds_alphabet_t');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_u', 'sounds_alphabet_u');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_v', 'sounds_alphabet_v');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_x', 'sounds_alphabet_x');
-INSERT INTO DETAIL(id_big, dt_image, dt_sound)
-VALUES(1, 'img_alphabet_y', 'sounds_alphabet_y');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_c', 'sounds_alphabet_c', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_c.mp3?alt=media&token=fccc8ab9-558d-4120-a2b3-1e32b3f31591');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_d', 'sounds_alphabet_d', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_d.mp3?alt=media&token=fcbdec5a-da0d-46c8-a9e8-39752212259e');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_e', 'sounds_alphabet_e', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_e.mp3?alt=media&token=97c5fd94-d2cf-497c-8214-ecec81203281');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_g', 'sounds_alphabet_g', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_g.mp3?alt=media&token=cfdbda4f-1e4e-44f0-adcf-b0bc579d0ece');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_h', 'sounds_alphabet_h', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_h.mp3?alt=media&token=afd3e199-e800-4f1f-aade-f95c96e85eb5');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_i', 'sounds_alphabet_i', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_i.mp3?alt=media&token=c3a766f0-02d5-4f7d-b94f-7cde13750d46');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_k', 'sounds_alphabet_k', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_k.mp3?alt=media&token=757ab893-6b17-465d-ab77-2cb506298971');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_l', 'sounds_alphabet_l', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_l.mp3?alt=media&token=392007de-0460-4ae8-95fe-da3547692291');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_m', 'sounds_alphabet_m', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_m.mp3?alt=media&token=697b04b5-e48f-491a-bf12-f291474a9da3');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_n', 'sounds_alphabet_n', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_n.mp3?alt=media&token=db50f5c9-b68e-47fd-86ec-78c91a24a275');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_o', 'sounds_alphabet_o', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_o.mp3?alt=media&token=16aa38b4-e341-4815-b974-0a3be78a032d');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_p', 'sounds_alphabet_p', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_p.mp3?alt=media&token=be73f17f-f0da-4a90-be1c-65157dfbd6d4');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_q', 'sounds_alphabet_q', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_q.mp3?alt=media&token=ab5aff89-741f-442e-a11c-0b8b775adca6');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_r', 'sounds_alphabet_r', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_r.mp3?alt=media&token=46c8515d-7f8f-4f94-a0fe-14d268b2e79d');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_s', 'sounds_alphabet_s', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_s.mp3?alt=media&token=f4e06b1a-0277-4fb1-8dd6-2140a7d3cb5b');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_t', 'sounds_alphabet_t', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_t.mp3?alt=media&token=ae782fbe-2da4-40eb-ac23-51551cba3049');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_u', 'sounds_alphabet_u', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_u.mp3?alt=media&token=295b34f8-ce01-4949-872d-20b657f3b17f');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_v', 'sounds_alphabet_v', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_v.mp3?alt=media&token=95a70a5f-d526-46f1-828b-386f8517a9bd');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_x', 'sounds_alphabet_x', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_x.mp3?alt=media&token=a14865ce-08f2-4424-a75c-1e1c993da5b9');
+INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)
+VALUES(1, 'img_alphabet_y', 'sounds_alphabet_y', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_alphabet_y.mp3?alt=media&token=2b41752b-ab6e-443d-86b5-33532e1562ec');
 
-		INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_0', 'sounds_number_0');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_1', 'sounds_number_1');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_2', 'sounds_number_2');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_3', 'sounds_number_3');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_4', 'sounds_number_4');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_5', 'sounds_number_5');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_6', 'sounds_number_6');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_7', 'sounds_number_7');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_8', 'sounds_number_8');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_9', 'sounds_number_9');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_10', 'sounds_number_10');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_11', 'sounds_number_11');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_12', 'sounds_number_12');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_13', 'sounds_number_13');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_14', 'sounds_number_14');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_15', 'sounds_number_15');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_16', 'sounds_number_16');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_17', 'sounds_number_17');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_18', 'sounds_number_18');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_19', 'sounds_number_19');
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(2, 'img_number_20', 'sounds_number_20');
+		INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_0', 'sounds_number_0' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_0.mp3?alt=media&token=7d15d8ad-ce49-47cd-b15f-9d68b2e7102f');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_1', 'sounds_number_1' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_1.mp3?alt=media&token=79c25212-8789-4c34-8182-4117dc1ae782');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_2', 'sounds_number_2' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_2.mp3?alt=media&token=59149e62-7387-47b4-b72b-e2d0ae4eccc0');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_3', 'sounds_number_3' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_3.mp3?alt=media&token=b5c97a69-ae69-4cbf-b26d-de48f5b4886f');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_4', 'sounds_number_4' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_4.mp3?alt=media&token=f0ba0723-6e14-414d-bd59-36e64038cb29');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_5', 'sounds_number_5' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_5.mp3?alt=media&token=2deb3515-2e5d-4096-bc97-c9e18adeac1f');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_6', 'sounds_number_6' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_6.mp3?alt=media&token=33d85ea9-1b73-4eaa-8c20-4515ff902303');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_7', 'sounds_number_7' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_7.mp3?alt=media&token=6b6e3b14-0c92-46c1-bafb-4bcd5564f580');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_8', 'sounds_number_8' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_8.mp3?alt=media&token=c651a147-eafd-439e-bd2c-18b66f04167f');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_9', 'sounds_number_9' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_9.mp3?alt=media&token=216e437c-8159-4635-8fe7-bc90cb83f8dc');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_10', 'sounds_number_10' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_10.mp3?alt=media&token=d3c3b2e5-ba91-4fb5-af11-87a747ffff1e');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_11', 'sounds_number_11' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_11.mp3?alt=media&token=a63b939e-5ece-4350-970b-ee59ab112ebb');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_12', 'sounds_number_12' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_12.mp3?alt=media&token=8e8d3f17-7bf1-40da-a5d4-c39e66cfbe75');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_13', 'sounds_number_13' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_13.mp3?alt=media&token=ba75c37c-9553-4291-a284-ddc459cedbd8');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_14', 'sounds_number_14' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_14.mp3?alt=media&token=da355211-a16e-49b8-be9c-8ccd30dcb8a2');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_15', 'sounds_number_15' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_15.mp3?alt=media&token=37380313-63f2-46c4-b90d-d98385349029');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_16', 'sounds_number_16' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_16.mp3?alt=media&token=ca7c3d13-86ab-409f-a2d6-953415a746bf');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_17', 'sounds_number_17' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_17.mp3?alt=media&token=89923cc5-744c-4040-8cbe-c7c50f3cce9a');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_18', 'sounds_number_18' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_18.mp3?alt=media&token=4d41f6bb-efba-41b3-8b43-d8f09bd8b97c');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_19', 'sounds_number_19' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_19.mp3?alt=media&token=5dc925ae-4eee-4b2d-8e5c-42f715e87684');
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(2, 'img_number_20', 'sounds_number_20' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_number_20.mp3?alt=media&token=4fb536cd-f59b-4705-b5a7-9f1f07587b3a');
 
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_ant', 'sounds_animal_ant')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_bear', 'sounds_animal_bear')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_bee', 'sounds_animal_bee')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_bird', 'sounds_animal_bird')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_buffalo', 'sounds_animal_buffalo')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_butterfly', 'sounds_animal_butterfly')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_cat', 'sounds_animal_cat')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_cow', 'sounds_animal_cow')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_deer', 'sounds_animal_deer')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_dog', 'sounds_animal_dog')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_dolphin', 'sounds_animal_dolphin')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_duck', 'sounds_animal_duck')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_elephant', 'sounds_animal_elephant')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_fox', 'sounds_animal_fox')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_frog', 'sounds_animal_frog')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_giraffe', 'sounds_animal_giraffe')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_goat', 'sounds_animal_goat')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_hen', 'sounds_animal_hen')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_hippo', 'sounds_animal_hippo')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_hippocampus', 'sounds_animal_hippocampus')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_horse', 'sounds_animal_horse')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_lion', 'sounds_animal_lion')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_monkey', 'sounds_animal_monkey')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_mouse', 'sounds_animal_mouse')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_ostrich', 'sounds_animal_ostrich')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_panda', 'sounds_animal_panda')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_panther', 'sounds_animal_panther')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_penguin', 'sounds_animal_penguin')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_pig', 'sounds_animal_pig')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_rabbit', 'sounds_animal_rabbit')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_rhino', 'sounds_animal_rhino')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_rooster', 'sounds_animal_rooster')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_shark', 'sounds_animal_shark')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_sheep', 'sounds_animal_sheep')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_snail', 'sounds_animal_snail')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_snake', 'sounds_animal_snake')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_squirrel', 'sounds_animal_squirrel')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_tiger', 'sounds_animal_tiger')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_turtle', 'sounds_animal_turtle')
-        INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(3, 'img_animal_zebra', 'sounds_animal_zebra')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_ant', 'sounds_animal_ant' , 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_ant.mp3?alt=media&token=6255fe08-1030-4176-ae6a-d0483673415a')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_bear', 'sounds_animal_bear', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_bear.mp3?alt=media&token=d06c4681-91fa-48eb-8d1a-4c61e4d111ee')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_bee', 'sounds_animal_bee', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_bee.mp3?alt=media&token=14116928-c6ab-4540-ab06-65e8a68c2e9c')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_bird', 'sounds_animal_bird', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_bird.mp3?alt=media&token=741ea5a5-1f3a-44cc-b1d1-c1616ca0750d')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_buffalo', 'sounds_animal_buffalo', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_buffalo.mp3?alt=media&token=136b8966-2f62-414c-81da-2dfa56fc9927')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_butterfly', 'sounds_animal_butterfly', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_butterfly.mp3?alt=media&token=10872691-6592-4d30-bce6-c9da48170eb3')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_cat', 'sounds_animal_cat', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_cat.mp3?alt=media&token=fb3084ea-cc19-443c-951c-d7c9af20de55')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_cow', 'sounds_animal_cow', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_cow.mp3?alt=media&token=c1bd834c-8d44-4f59-9ce1-ac1854a31768')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_deer', 'sounds_animal_deer', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_deer.mp3?alt=media&token=4b18d9d2-6937-4f6c-a8a1-cbca8feaa836')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_dog', 'sounds_animal_dog', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_dog.mp3?alt=media&token=3e2330cd-98c6-41bf-b5ad-61b15c5991a1')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_dolphin', 'sounds_animal_dolphin', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_dolphin.mp3?alt=media&token=88f7bcc8-e1e8-4b25-8e34-18edb8d79941')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_duck', 'sounds_animal_duck', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_duck.mp3?alt=media&token=ecd26ebe-9dd5-4863-8a61-654bd2804b35')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_elephant', 'sounds_animal_elephant', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_elephant.mp3?alt=media&token=81783422-d8ff-41cd-96b3-eb44a40d6031')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_fox', 'sounds_animal_fox', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_fox.mp3?alt=media&token=5b846b59-d432-4631-b15c-fc1fa245d344')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_frog', 'sounds_animal_frog', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_frog.mp3?alt=media&token=dd0b55e3-0b41-4664-b942-f4de70ee7d82')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_giraffe', 'sounds_animal_giraffe', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_giraffe.mp3?alt=media&token=db0afe77-068e-49b6-844d-a30ae2a62b27')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_goat', 'sounds_animal_goat', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_goat.mp3?alt=media&token=cc7a716a-2a7b-4b5f-be81-3b3e14326632')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_hen', 'sounds_animal_hen', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_hen.mp3?alt=media&token=18e88bd3-bde0-4b3e-9631-4e11da9de3d5')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_hippo', 'sounds_animal_hippo', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_hippo.mp3?alt=media&token=f625f884-75ad-4660-be05-331284a66653')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_hippocampus', 'sounds_animal_hippocampus', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_hippocampus.mp3?alt=media&token=8cfd3512-8c6d-4d57-bdc8-51b83642ed09')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_horse', 'sounds_animal_horse', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_horse.mp3?alt=media&token=9abf6fa9-b3e9-43c3-b0c0-51d7c7d6aca0')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_lion', 'sounds_animal_lion', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_lion.mp3?alt=media&token=339aec20-a022-4806-8f72-fa7278b95dd6')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_monkey', 'sounds_animal_monkey', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_monkey.mp3?alt=media&token=d1e5c4a1-5597-4540-aa3e-7a08b7752ba1')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_mouse', 'sounds_animal_mouse', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_mouse.mp3?alt=media&token=5725f543-7870-4d75-81e5-b56bb93b7ae8')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_ostrich', 'sounds_animal_ostrich', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_ostrich.mp3?alt=media&token=a55ef01b-c4d0-4086-97fb-96be827ea24c')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_panda', 'sounds_animal_panda', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_panda.mp3?alt=media&token=d0264fd5-5a88-4166-bea0-18dde39c2542')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_panther', 'sounds_animal_panther', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_panther.mp3?alt=media&token=fb9593fd-3de1-49c8-951b-73b18a2ee95e')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_penguin', 'sounds_animal_penguin', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_penguin.mp3?alt=media&token=86b5670e-ff03-443d-b8fb-7a565b2106d7')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_pig', 'sounds_animal_pig', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_pig.mp3?alt=media&token=57bea720-8ff8-4f73-938d-4a629f1e79f3')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_rabbit', 'sounds_animal_rabbit', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_rabbit.mp3?alt=media&token=ca007274-74f7-47ce-bb86-eb021acb5946')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_rhino', 'sounds_animal_rhino', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_rhino.mp3?alt=media&token=d6682f4d-0248-4ca9-8191-230ae1c67312')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_rooster', 'sounds_animal_rooster', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_rooster.mp3?alt=media&token=344111ac-e977-451a-bd9e-502fd7bfbbdf')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_shark', 'sounds_animal_shark', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_shark.mp3?alt=media&token=4accffcb-9dff-4725-924d-e2fcaf396b86')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_sheep', 'sounds_animal_sheep', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_sheep.mp3?alt=media&token=047954fc-3512-4865-91bb-320a900ed0cd')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_snail', 'sounds_animal_snail', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_snail.mp3?alt=media&token=e9e725d6-7121-49c2-b219-4fd7b59fb8c4')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_snake', 'sounds_animal_snake', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_snake.mp3?alt=media&token=a14449b4-d1b9-4547-93bb-4c8da8126b04')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_squirrel', 'sounds_animal_squirrel', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_squirrel.mp3?alt=media&token=bc22ee4d-d172-481b-8654-8f0a8231499e')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_tiger', 'sounds_animal_tiger', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_tiger.mp3?alt=media&token=dee02aa3-ee60-4690-9652-9b68e59e36b3')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_turtle', 'sounds_animal_turtle', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_turtle.mp3?alt=media&token=0a309550-bed0-4c46-9d33-9e62210ababf')
+        INSERT INTO DETAIL(id_big, dt_image, dt_sound, sound_link)VALUES(3, 'img_animal_zebra', 'sounds_animal_zebra', 'https://firebasestorage.googleapis.com/v0/b/languageforkid.appspot.com/o/sounds_animal_zebra.mp3?alt=media&token=6a08d454-7cfe-4c6e-99fc-98b7cb9d21d3')
 
         INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(4, 'img_fruit_apple', 'sounds_fruit_apple')
         INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(4, 'img_fruit_apricot', 'sounds_fruit_apricot')
