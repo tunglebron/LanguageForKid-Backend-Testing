@@ -1,16 +1,16 @@
-var db=require('./Database');
+var db = require('./Database');
 
 exports.auth = async (username, password, callback) => {
-  let sql = `SELECT * FROM Account WHERE username = '${username}' AND password = '${password}'`;
-  await db.query(sql, function(err, data) {
+  let sql = `SELECT * FROM ACCOUNTS WHERE username = '${username}' AND password = '${password}'`;
+  await db.query(sql, function (err, data) {
     callback(data);
   })
 }
 
 exports.getUser = async (username, callback) => {
-  let sql = `SELECT TOP 1 * FROM Account WHERE username = '${username}'`;
+  let sql = `SELECT TOP 1 * FROM ACCOUNTS WHERE username = '${username}'`;
   try {
-    await db.query(sql, function(err, data) {
+    await db.query(sql, function (err, data) {
       callback(data);
     })
   } catch (error) {
@@ -19,9 +19,9 @@ exports.getUser = async (username, callback) => {
 }
 
 exports.getUserName = async (username, callback) => {
-  let sql = `SELECT username FROM Account WHERE username = '${username}'`;
+  let sql = `SELECT username FROM ACCOUNTS WHERE username = '${username}'`;
   try {
-    await db.query(sql, function(err, data) {
+    await db.query(sql, function (err, data) {
       callback(data);
     })
   } catch {
@@ -29,10 +29,10 @@ exports.getUserName = async (username, callback) => {
   }
 }
 
-exports.getPassword = async (username, callback) => {
-  let sql = `SELECT password FROM Account WHERE username = '${username}'`;
+exports.getPassword = async (password, callback) => {
+  let sql = `SELECT password FROM ACCOUNTS WHERE username = '${password}'`;
   try {
-    await db.query(sql, function(err, data) {
+    await db.query(sql, function (err, data) {
       callback(data);
     })
   } catch {
@@ -41,9 +41,20 @@ exports.getPassword = async (username, callback) => {
 }
 
 exports.getEmail = async (email, callback) => {
-  let sql = `SELECT email FROM Account WHERE email = '${email}'`;
+  let sql = `SELECT email FROM ACCOUNTS WHERE email = '${email}'`;
   try {
-    await db.query(sql, function(err, data) {
+    await db.query(sql, function (err, data) {
+      callback(data);
+    })
+  } catch {
+    callback(null);
+  }
+}
+
+exports.getName = async (name, callback) => {
+  let sql = `SELECT name FROM ACCOUNTS WHERE username = '${name}'`;
+  try {
+    await db.query(sql, function (err, data) {
       callback(data);
     })
   } catch {
@@ -52,9 +63,9 @@ exports.getEmail = async (email, callback) => {
 }
 
 exports.getRefreshToken = async (username, callback) => {
-  let sql = `SELECT TOP 1 refreshToken FROM Account WHERE username = '${username}' and refreshToken is not NULL`;
+  let sql = `SELECT TOP 1 refreshToken FROM ACCOUNTS WHERE username = '${username}' and refreshToken is not NULL`;
   try {
-    await db.query(sql, function(err, data) {
+    await db.query(sql, function (err, data) {
       callback(data);
     })
   } catch {
@@ -62,21 +73,21 @@ exports.getRefreshToken = async (username, callback) => {
   }
 }
 
-exports.createUser = async (username, password, email) => {
-  let sql = `INSERT INTO Account(username, password, email) VALUES ('${username}', '${password}', '${email}');`;
-	try {
-		db.query(sql, function(err, data) {
+exports.createUser = async (username, password, email, name) => {
+  let sql = `INSERT INTO ACCOUNTS(username, password, email, name, learnProgress, testProgress) VALUES ('${username}', '${password}', '${email}', '${name}', '${1}', '${0}');`;
+  try {
+    db.query(sql, function (err, data) {
       return data;
     })
-	} catch {
-		return null;
-	}
+  } catch {
+    return null;
+  }
 };
 
 exports.updateRefreshToken = async (username, refreshToken) => {
-	let sql = `UPDATE Account SET refreshToken = '${refreshToken}' WHERE username = '${username}'`;
+  let sql = `UPDATE ACCOUNTS SET refreshToken = '${refreshToken}' WHERE username = '${username}'`;
   try {
-    db.query(sql, function(err, data) {
+    db.query(sql, function (err, data) {
       return true;
     })
   } catch (error) {

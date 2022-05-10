@@ -8,9 +8,10 @@ var register = async (req, res, next) => {
   let username = req.body.username.toLowerCase();
   let password = req.body.password;
   let email = req.body.email.toLowerCase();
+  let name = req.body.name;
 
   const hashPassword = bcrypt.hashSync(password, SALT_ROUNDS);
-  if (modelUser.createUser(username, hashPassword, email) == null) {
+  if (modelUser.createUser(username, hashPassword, email, name) == null) {
     var error = new Error("Error occurs when saving user account");
     next(error);
   } else {

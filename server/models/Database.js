@@ -17,4 +17,5 @@ var db = mssql.connect(config, function(err) {
   if (err) console.log(err);
   console.log('Da ket noi database');
 });
+
 module.exports = db;
