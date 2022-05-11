@@ -1,12 +1,12 @@
 var modelDetail = require("./../models/Detail");
 
 var detailFilterNoParam = (req, res, next) => {
-  let filterByName = req.query.name;
-  if (filterByName == undefined || filterByName == null) {
+  let filterById = req.query.id;
+  if (filterById == undefined || filterById == null) {
     res.error({
       errors: {},
       code: 400,
-      message: "No filter name provided",
+      message: "No filter id provided",
       result: {},
     });
   } else {
@@ -18,54 +18,16 @@ var detailInvalidFilter = (req, res, next) => {
   res.error({
     errors: {},
     code: 400,
-    message: "Invalid filter name",
+    message: "Invalid filter id",
     result: {},
   });
 }
 
 var getItemsByFilter = (req, res, next) => {
-  let filterByName = req.query.name;
+  let bigListId = req.query.id;
 
-  let param = "";
-
-  switch (filterByName) {
-    case "alphabet":
-      param = "1";
-      break;
-    case "number":
-      param = "2";
-      break;
-    case "animal":
-      param = "3";
-      break;
-    case "fruit":
-      param = "4";
-      break;
-    case "geometry":
-      param = "5";
-      break;
-    case "school":
-      param = "6";
-      break;
-    case "color":
-      param = "7";
-      break;
-    case "flower":
-      param = "8";
-      break;
-    case "vehicle":
-      param = "9";
-      break;
-    case "country":
-      param = "10";
-      break;
-    default:
-      param = "-1";
-      break;
-  }
-
-  if (param != "" && param != "-1") {
-    modelDetail.allItemsById(param, function (result) {
+  if (bigListId != "" && bigListId != "-1") {
+    modelDetail.allItemsById(bigListId, function (result) {
       res.success({
         result: {
           data: result.recordset,

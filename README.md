@@ -16,7 +16,7 @@ GET: http://localhost:3001/api/v1/big-list
 2. Lấy tất cả bài học <br>
 GET: http://localhost:3001/api/v1/detail
 3. Lấy tất cả bài học theo chủ đề <br>
-GET: http://localhost:3001/api/v1/detail/filter?name={name}
+GET: http://localhost:3001/api/v1/detail/filter?id={id}
 - Sử dụng query string
 4. Lấy danh sách bài học ngẫu nhiên <br>
 GET: http://localhost:3001/api/v1/detail/random

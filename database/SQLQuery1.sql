@@ -357,4 +357,4 @@ INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(10, 'img_country_timorleste
 INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(10, 'img_country_uruguay', 'sounds_country_uruguay')
 
 
-Select * from ACCOUNT
+Select * from ACCOUNTS

@@ -23,6 +23,10 @@ router.post(
 
 router.post("/user/refresh", userController.refreshToken);
 
+router.put("/user/update/learn-progress", userController.refreshToken);
+
+router.put("/user/update/test-progress", userController.refreshToken);
+
 router.get(
   "/big-list",
   authenticationMiddleware.isAuth,

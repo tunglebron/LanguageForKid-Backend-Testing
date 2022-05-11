@@ -261,6 +261,10 @@ var refreshToken = async (req, res, next) => {
 
 };
 
+var updateLearnProgress = async (req, res, next) => {
+  let learned = req.body.learned;
+};
+
 module.exports = {
   register,
   registerCheckDuplicateEmail,
