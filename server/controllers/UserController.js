@@ -228,32 +228,32 @@ var refreshToken = async (req, res, next) => {
           result: {},
         });
       } else {
-          // Create new access token
-          const dataForAccessToken = {
-            username,
-          };
+        // Create new access token
+        const dataForAccessToken = {
+          username,
+        };
 
-          const accessToken = await authMethod.generateToken(
-            dataForAccessToken,
-            accessTokenSecret,
-            accessTokenLife
-          );
-          if (!accessToken) {
-            return res.error({
-              errors: {},
-              code: 400,
-              message: "Create access token failed",
-              result: {},
-            });
-          } else {
-            return res.success({
-              result: {
-                accessToken
-              },
-              code: 200,
-              message: "success",
-            });
-          }
+        const accessToken = await authMethod.generateToken(
+          dataForAccessToken,
+          accessTokenSecret,
+          accessTokenLife
+        );
+        if (!accessToken) {
+          return res.error({
+            errors: {},
+            code: 400,
+            message: "Create access token failed",
+            result: {},
+          });
+        } else {
+          return res.success({
+            result: {
+              accessToken
+            },
+            code: 200,
+            message: "success",
+          });
+        }
       }
     }
   });
@@ -261,8 +261,53 @@ var refreshToken = async (req, res, next) => {
 
 };
 
+var getUserInfoNoParam = (req, res, next) => {
+  let username = req.query.username;
+
+  if (username == undefined || username == null) {
+    res.error({
+      errors: {},
+      code: 400,
+      message: "No username provided",
+      result: {},
+    });
+  } else {
+    next();
+  }
+};
+
+var getUserInfo = (req, res, next) => {
+  let username = req.query.username;
+
+  if (username != "" ) {
+    modelUser.getUserInfoByUserName(username, function (result) {
+      res.success({
+        result: {
+          data: result.recordset,
+        },
+        code: 200,
+        message: "",
+      });
+    });
+  } else {
+    next();
+  }
+};
+
+var getUserInfoInvalidUsername = (req, res, next) => {
+  res.error({
+    errors: {},
+    code: 400,
+    message: "Invalid username",
+    result: {},
+  });
+}
+
 var updateLearnProgress = async (req, res, next) => {
+  let username = req.body.username.toLowerCase();
   let learned = req.body.learned;
+
+  if (modelUser.getLearnProgress(username) > )
 };
 
 module.exports = {
@@ -274,4 +319,7 @@ module.exports = {
   proceessRefreshToken,
   afterAuth,
   refreshToken,
+  getUserInfoNoParam,
+  getUserInfo,
+  getUserInfoInvalidUsername
 };

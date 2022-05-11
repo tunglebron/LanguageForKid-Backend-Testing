@@ -23,6 +23,8 @@ router.post(
 
 router.post("/user/refresh", userController.refreshToken);
 
+router.get("/user/user-info", userController.getUserInfoNoParam, userController.getUserInfo, userController.getUserInfoInvalidUsername);
+
 router.put("/user/update/learn-progress", userController.refreshToken);
 
 router.put("/user/update/test-progress", userController.refreshToken);

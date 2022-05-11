@@ -51,8 +51,8 @@ exports.getEmail = async (email, callback) => {
   }
 }
 
-exports.getName = async (username, callback) => {
-  let sql = `SELECT name FROM ACCOUNTS WHERE username = '${username}'`;
+exports.getUserInfoByUserName = async (username, callback) => {
+  let sql = `SELECT name, learnProgress, testProgress FROM ACCOUNTS WHERE username = '${username}'`;
   try {
     await db.query(sql, function (err, data) {
       callback(data);
@@ -66,10 +66,21 @@ exports.getLearnProgress = async (username, callback) => {
   let sql = `SELECT learnProgress FROM ACCOUNTS WHERE username = '${username}'`;
   try {
     await db.query(sql, function (err, data) {
-      callback(data);
+      return data;
     })
   } catch {
-    callback(null);
+    return null;
+  }
+}
+
+exports.updateLearnProgress = async (username, newLearnProgress, callback) => {
+  let sql = `UPDATE ACCOUNTS SET learnProgress = '${newLearnProgress}' WHERE username = '${username}'`;
+  try {
+    await db.query(sql, function (err, data) {
+      return true;
+    })
+  } catch {
+    return false;
   }
 }
 
