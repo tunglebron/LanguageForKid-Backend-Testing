@@ -17,17 +17,24 @@ router.post(
   "/user/login",
   userController.auth,
   userController.processAccessToken,
-  userController.proceessRefreshToken,
+  userController.processRefreshToken,
   userController.afterAuth
 );
 
 router.post("/user/refresh", userController.refreshToken);
 
-router.get("/user/user-info", userController.getUserInfoNoParam, userController.getUserInfo, userController.getUserInfoInvalidUsername);
+router.get(
+  "/user/user-info",
+  userController.getUserInfoCheckParam,
+  userController.getUserInfo,
+  userController.getUserInfoInvalidUsername
+);
 
-router.put("/user/update/learn-progress", userController.refreshToken);
-
-router.put("/user/update/test-progress", userController.refreshToken);
+router.put(
+  "/user/update-progress",
+  userController.updateProgressCheckParam,
+  userController.updateProgress
+);
 
 router.get(
   "/big-list",

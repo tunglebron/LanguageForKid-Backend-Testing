@@ -140,7 +140,7 @@ var processAccessToken = async (req, res, next) => {
   }
 };
 
-var proceessRefreshToken = async (req, res, next) => {
+var processRefreshToken = async (req, res, next) => {
   let refreshToken = randToken.generate(64);
   let username = req.body.username.toLowerCase();
   modelUser.getRefreshToken(username, (result) => {
@@ -261,7 +261,7 @@ var refreshToken = async (req, res, next) => {
 
 };
 
-var getUserInfoNoParam = (req, res, next) => {
+var getUserInfoCheckParam = (req, res, next) => {
   let username = req.query.username;
 
   if (username == undefined || username == null) {
@@ -279,15 +279,24 @@ var getUserInfoNoParam = (req, res, next) => {
 var getUserInfo = (req, res, next) => {
   let username = req.query.username;
 
-  if (username != "" ) {
-    modelUser.getUserInfoByUserName(username, function (result) {
-      res.success({
-        result: {
-          data: result.recordset,
-        },
-        code: 200,
-        message: "",
-      });
+  if (username != "") {
+    modelUser.getUserInfo(username, function (result) {
+      if (result.recordset.length > 0) {
+        res.success({
+          result: {
+            data: result.recordset,
+          },
+          code: 200,
+          message: "",
+        });
+      } else {
+        res.error({
+          errors: {},
+          code: 400,
+          message: "Username not found",
+          result: {},
+        });
+      }
     });
   } else {
     next();
@@ -303,11 +312,67 @@ var getUserInfoInvalidUsername = (req, res, next) => {
   });
 }
 
-var updateLearnProgress = async (req, res, next) => {
-  let username = req.body.username.toLowerCase();
-  let learned = req.body.learned;
+var updateProgressCheckParam = async (req, res, next) => {
+  let username = req.query.username;
+  let learned = req.query.learned;
 
-  if (modelUser.getLearnProgress(username) > )
+  if (username == undefined || username == null || learned == undefined || learned == null) {
+    res.error({
+      errors: {},
+      code: 400,
+      message: "No username or learned provided",
+      result: {},
+    });
+  } else {
+    next();
+  }
+};
+
+var updateProgress = async (req, res, next) => {
+  let username = req.query.username;
+  let learned = req.query.learned;
+
+  modelUser.getLearnProgress(username, function (result) {
+    if (result.rowsAffected == 0) {
+      res.error({
+        errors: {},
+        code: 400,
+        message: "The provided username could not be found",
+        result: {},
+      });
+    } else {
+      const currentLearnProgress = result.recordset[0].learnProgress
+
+      if (currentLearnProgress == learned) {
+        const newLearnProgress = currentLearnProgress + 1
+        const newTestProgress = learned
+
+        if (modelUser.updateProgress(username, newLearnProgress, newTestProgress) == null) {
+          var error = new Error("Error occurs when update learn progress");
+          next(error);
+        } else {
+          res.success({
+            result: {},
+            code: 200,
+            message: "Update learn progress successfully",
+          });
+        }
+      } else if (currentLearnProgress > learned) {
+        res.success({
+          result: {},
+          code: 200,
+          message: "Update learn progress successfully",
+        });
+      } else if (currentLearnProgress < learned) {
+        res.success({
+          result: {},
+          code: 400,
+          message: "Invalid learned provided",
+        });
+      }
+
+    }
+  });
 };
 
 module.exports = {
@@ -316,10 +381,12 @@ module.exports = {
   registerCheckDuplicateUserName,
   auth,
   processAccessToken,
-  proceessRefreshToken,
+  processRefreshToken,
   afterAuth,
   refreshToken,
-  getUserInfoNoParam,
+  getUserInfoCheckParam,
   getUserInfo,
-  getUserInfoInvalidUsername
+  getUserInfoInvalidUsername,
+  updateProgressCheckParam,
+  updateProgress,
 };
