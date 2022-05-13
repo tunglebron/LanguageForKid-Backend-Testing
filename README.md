@@ -13,10 +13,13 @@ API có thể sử dụng <br>
 -----
 1. Lấy danh sách chủ đề của bài học <br>
 GET: http://localhost:3001/api/v1/big-list
+- Yêu cầu có param <b>'x_authorization'</b> là accessToken được trả về sau khi đăng nhập thành công trong Header
 2. Lấy tất cả bài học <br>
 GET: http://localhost:3001/api/v1/detail
+- Yêu cầu có param <b>'x_authorization'</b> là accessToken được trả về sau khi đăng nhập thành công trong Header
 3. Lấy tất cả bài học theo chủ đề <br>
 GET: http://localhost:3001/api/v1/detail/filter?id={id}
+- Yêu cầu có param <b>'x_authorization'</b> là accessToken được trả về sau khi đăng nhập thành công trong Header
 - Sử dụng query string
 4. Lấy danh sách bài học ngẫu nhiên <br>
 GET: http://localhost:3001/api/v1/detail/random
@@ -43,7 +46,9 @@ POST: http://localhost:3001/api/v1/user/login
 POST: http://localhost:3001/api/v1/user/refresh
 - Yêu cầu có param <b>'x_authorization'</b> chứa access token (đã hết hạn) trong <b>Headers</b>
 - Truyền JSON vào <b>Body</b> với tham số <b>'refreshToken'</b> chứa refreshToken của user
-
+8. Lấy thông tin user:
+GET: http://localhost:3001/api/v1/user/info
+- Yêu cầu có param <b>'x_authorization'</b> là accessToken được trả về sau khi đăng nhập thành công trong Header
 
 Gửi access token sau khi đăng nhập thành công <br>
 -----

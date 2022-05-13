@@ -24,7 +24,7 @@ router.post(
 router.post("/user/refresh", userController.refreshToken);
 
 router.get(
-  "/user/user-info",
+  "/user/info",
   userController.getUserInfoCheckParam,
   userController.getUserInfo,
   userController.getUserInfoInvalidUsername
