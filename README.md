@@ -28,9 +28,9 @@ POST: http://localhost:3001/api/v1/user/register
 - Truyền JSON vào <b>Body</b> với 3 tham số: <b>username</b>, <b>password</b>, <b>email</b>
 <pre>
 { 
-    username: 'user1',
-    password: '12345678',
-    email: 'user1@gmail.com'
+    "username": "user1",
+    "password": "12345678",
+    "email": "user1@gmail.com"
 }
 </pre>
 6. Đăng nhập người dùng <br>
@@ -38,8 +38,8 @@ POST: http://localhost:3001/api/v1/user/login
 - Truyền JSON vào <b>BODY</b> với 2 tham số: <b>username</b>, <b>password</b>
 <pre>
 { 
-    username: 'user1',
-    password: '12345678'
+    "username": "user1",
+    "password": "12345678"
 }
 </pre>
 7. Cấp lại access token cho người dùng sau khi hết hạn đăng nhập <br>
