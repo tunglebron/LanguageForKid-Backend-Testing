@@ -28,8 +28,5 @@ exports.isAuth = async (req, res, next) => {
     });
   } else {
     next();
-    // modelUser.getUser(verified.payload.username, (result) => {
-    //   req.user = result.recordset[0];
-    // });
   }
 };

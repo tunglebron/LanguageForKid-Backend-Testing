@@ -41,3 +41,18 @@ exports.verifyToken = async (token, secretKey) => {
 		return null;
 	}
 };
+
+/**
+* Return all information when verify token
+* @author: lntung
+* CreatedDate: 17/05/2022 at 22:46:56
+*/
+exports.verifyTokenForChecking = (token, secretKey, callback) => {
+	jwt.verify(token, secretKey, function(err, decoded) {
+		if (err) {
+			callback(false, err);
+		} else {
+			callback(true, decoded);
+		}
+	});
+}
