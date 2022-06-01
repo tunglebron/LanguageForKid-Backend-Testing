@@ -29,6 +29,17 @@ exports.getUserName = async (username, callback) => {
   }
 }
 
+exports.getName = async (username, callback) => {
+  let sql = `SELECT name FROM ACCOUNTS WHERE username = '${username}'`;
+  try {
+    await db.query(sql, function (err, data) {
+      callback(data);
+    })
+  } catch {
+    callback(null);
+  }
+}
+
 exports.getPassword = async (username, callback) => {
   let sql = `SELECT password FROM ACCOUNTS WHERE username = '${username}'`;
   try {
@@ -86,6 +97,28 @@ exports.getTestProgress = async (username, callback) => {
 
 exports.updateProgress = async (username, newLearnProgress, newTestProgress, callback) => {
   let sql = `UPDATE ACCOUNTS SET learnProgress = '${newLearnProgress}', testProgress = '${newTestProgress}' WHERE username = '${username}'`;
+  try {
+    await db.query(sql, function (err, data) {
+      return true;
+    })
+  } catch {
+    return false;
+  }
+}
+
+exports.updateName = async (username, newName, callback) => {
+  let sql = `UPDATE ACCOUNTS SET name = '${newName}' WHERE username = '${username}'`;
+  try {
+    await db.query(sql, function (err, data) {
+      return true;
+    })
+  } catch {
+    return false;
+  }
+}
+
+exports.updatePassword = async (username, newPassword, callback) => {
+  let sql = `UPDATE ACCOUNTS SET password = '${newPassword}' WHERE username = '${username}'`;
   try {
     await db.query(sql, function (err, data) {
       return true;

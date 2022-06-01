@@ -34,11 +34,28 @@ router.get(
 );
 
 router.put(
+  "/user/info/change/name",
+  authenticationMiddleware.isAuth,
+  userController.updateNameCheckParam,
+  userController.updateName
+);
+
+
+router.put(
+  "/user/info/change/password",
+  authenticationMiddleware.isAuth,
+  userController.updatePasswordCheckParam,
+  userController.updatePassword
+);
+
+
+router.put(
   "/user/update-progress",
   authenticationMiddleware.isAuth,
   userController.updateProgressCheckParam,
   userController.updateProgress
 );
+
 
 router.get(
   "/big-list",
