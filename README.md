@@ -42,6 +42,14 @@ POST: http://localhost:3001/api/v1/user/login
     "password": "12345678"
 }
 </pre>
+Gửi access token sau khi đăng nhập thành công <br>
+-----
+<b>Headers</b>
+<pre>
+{ 
+    x_authorization: ... accessToken ... 
+} 
+</pre>
 7. Cấp lại access token cho người dùng sau khi hết hạn đăng nhập <br>
 POST: http://localhost:3001/api/v1/user/refresh
 - Yêu cầu có param <b>'x_authorization'</b> chứa access token (đã hết hạn) trong <b>Headers</b>
@@ -52,12 +60,19 @@ GET: http://localhost:3001/api/v1/user/info
 9. Kiểm tra accessToken có sử dụng được hay không <br>
 POST: http://localhost:3001/api/v1/user/checkExpiredToken
 - Yêu cầu có param <b>'x_authorization'</b> là accessToken
-
-Gửi access token sau khi đăng nhập thành công <br>
------
-<b>Headers</b>
+10. Thay đổi tên người dùng.
+POST: http://localhost:3001/api/v1/user/info/change/name?username={username}&newName={newName}
+- Yêu cầu có param <b>'x_authorization'</b> là accessToken
+- Có param username và newName
+11. Thay đổi mật khẩu.
+POST: http://localhost:3001/api/v1/user/info/change/password
+- Yêu cầu có param <b>'x_authorization'</b> là accessToken
+- Truyền JSON vào <b>Body</b> với 3 tham số: <b>username</b>, <b>curPassword</b>, <b>newPassword</b>
 <pre>
 { 
-    x_authorization: ... accessToken ... 
-} 
+    "username": "user1",
+    "curPassword": "12345678",
+    "newPassword": "12341234"
+}
 </pre>
+

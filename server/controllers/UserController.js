@@ -526,6 +526,117 @@ var updateProgress = async (req, res, next) => {
   });
 };
 
+var updateNameCheckParam = async (req, res, next) => {
+  let username = req.query?.username;
+  let newName = req.query?.newName;
+
+  if (username == undefined || username == null || newName == undefined || newName == null) {
+    res.error({
+      errors: {},
+      code: 400,
+      message: "No username or name provided",
+      result: {},
+    });
+  } else {
+    next();
+  }
+};
+
+var updateName = async (req, res, next) => {
+  let username = req.query?.username;
+  let newName = req.query?.newName;
+
+  modelUser.getName(username, function (result) {
+    if (result.rowsAffected == 0) {
+      res.error({
+        errors: {},
+        code: 400,
+        message: "The provided username could not be found",
+        result: {},
+      });
+    } else {
+      if (modelUser.updateName(username, newName) == null) {
+        var error = new Error("Error occurs when update learn progress");
+        next(error);
+      } else {
+        res.success({
+          result: {},
+          code: 200,
+          message: "Update learn progress successfully",
+        });
+      }
+    }
+  });
+};
+
+var updatePasswordCheckParam = async (req, res, next) => {
+  const username = req.body?.username.toLowerCase();
+  const curPassword = req.body?.password;
+  const newPassword = req.body?.password;
+
+  if (username == undefined || username == null) {
+    res.error({
+      errors: {},
+      code: 400,
+      message: "No username provided",
+      result: {},
+    });
+  } else if (curPassword == undefined || curPassword == null || newPassword == undefined || newPassword == null) {
+    res.error({
+      errors: {},
+      code: 400,
+      message: "No current password or new password provided",
+      result: {},
+    });
+  }
+  else {
+    next();
+  }
+};
+
+var updatePassword = async (req, res, next) => {
+  const username = req.body?.username.toLowerCase();
+  const curPassword = req.body?.password;
+  const newPassword = req.body?.password;
+
+  modelUser.getPassword(username, function (result) {
+    if (result.rowsAffected == 0) {
+      res.error({
+        errors: {},
+        code: 400,
+        message: "The provided username could not be found",
+        result: {},
+      });
+    } else {
+      var userPassword = result.recordset[0].password;
+      const isPasswordCorrect = bcrypt.compareSync(curPassword, userPassword);
+      if (!isPasswordCorrect) {
+        res.error({
+          errors: {},
+          code: 401,
+          message: "Current password provided is incorrect",
+          result: {},
+        });
+      } else {
+        const hashPassword = bcrypt.hashSync(newPassword, SALT_ROUNDS);
+        if (modelUser.updatePassword(username, hashPassword ) == null) {
+          res.error({
+            result: {},
+            code: 500,
+            message: "Error occurs when saving user password",
+          });
+        } else {
+          res.success({
+            result: {},
+            code: 200,
+            message: "Change user password successfully",
+          });
+        }
+      }
+    }
+  });
+};
+
 module.exports = {
   register,
   registerCheckDuplicateEmail,
@@ -540,5 +651,9 @@ module.exports = {
   getUserInfoInvalidUsername,
   updateProgressCheckParam,
   updateProgress,
+  updateNameCheckParam,
+  updateName,
+  updatePasswordCheckParam,
+  updatePassword,
   checkExpiredToken,
 };
