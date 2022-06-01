@@ -248,7 +248,7 @@ var refreshToken = async (req, res, next) => {
         } else {
           return res.success({
             result: {
-              accessToken
+              accessToken,
             },
             code: 200,
             message: "success",
@@ -257,8 +257,159 @@ var refreshToken = async (req, res, next) => {
       }
     }
   });
+};
 
+var getUserInfoCheckParam = (req, res, next) => {
+  let username = req.query.username;
 
+  if (username == undefined || username == null) {
+    res.error({
+      errors: {},
+      code: 400,
+      message: "No username provided",
+      result: {},
+    });
+  } else {
+    next();
+  }
+};
+
+var getUserInfo = (req, res, next) => {
+  let username = req.query.username;
+
+  if (username != "") {
+    modelUser.getUserInfo(username, function (result) {
+      if (result.recordset.length > 0) {
+        res.success({
+          result: {
+            data: result.recordset,
+          },
+          code: 200,
+          message: "",
+        });
+      } else {
+        res.error({
+          errors: {},
+          code: 400,
+          message: "Username not found",
+          result: {},
+        });
+      }
+    });
+  } else {
+    next();
+  }
+};
+
+var getUserInfoInvalidUsername = (req, res, next) => {
+  res.error({
+    errors: {},
+    code: 400,
+    message: "Invalid username",
+    result: {},
+  });
+};
+
+var updateProgressCheckParam = async (req, res, next) => {
+  let username = req.query.username;
+  let learned = req.query.learned;
+
+  if (
+    username == undefined ||
+    username == null ||
+    learned == undefined ||
+    learned == null
+  ) {
+    res.error({
+      errors: {},
+      code: 400,
+      message: "No username or learned provided",
+      result: {},
+    });
+  } else {
+    next();
+  }
+};
+
+var updateProgress = async (req, res, next) => {
+  let username = req.query.username;
+  let learned = req.query.learned;
+
+  modelUser.getLearnProgress(username, function (result) {
+    if (result.rowsAffected == 0) {
+      res.error({
+        errors: {},
+        code: 400,
+        message: "The provided username could not be found",
+        result: {},
+      });
+    } else {
+      const currentLearnProgress = result.recordset[0].learnProgress;
+
+      if (currentLearnProgress == learned) {
+        const newLearnProgress = currentLearnProgress + 1;
+        const newTestProgress = learned;
+
+        if (
+          modelUser.updateProgress(
+            username,
+            newLearnProgress,
+            newTestProgress
+          ) == null
+        ) {
+          var error = new Error("Error occurs when update learn progress");
+          next(error);
+        } else {
+          res.success({
+            result: {},
+            code: 200,
+            message: "Update learn progress successfully",
+          });
+        }
+      } else if (currentLearnProgress > learned) {
+        res.success({
+          result: {},
+          code: 200,
+          message: "Update learn progress successfully",
+        });
+      } else if (currentLearnProgress < learned) {
+        res.success({
+          result: {},
+          code: 400,
+          message: "Invalid learned provided",
+        });
+      }
+    }
+  });
+};
+
+var checkExpiredToken = async (req, res, next) => {
+  const accessTokenFromHeader = req.headers.x_authorization;
+  const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
+
+  if (!accessTokenFromHeader) {
+    return res.unauth({
+      errors: {},
+      code: 401,
+      message: "Access denied",
+      result: {},
+    });
+  } else {
+    authMethod.verifyTokenForChecking(
+      accessTokenFromHeader,
+      accessTokenSecret,
+      function (result, data) {
+        return res.success({
+          result: {
+            data,
+            validAccessToken: result,
+          },
+          code: 200,
+          message: "success",
+        });
+      }
+    );
+  }
 };
 
 var getUserInfoCheckParam = (req, res, next) => {
@@ -389,4 +540,5 @@ module.exports = {
   getUserInfoInvalidUsername,
   updateProgressCheckParam,
   updateProgress,
+  checkExpiredToken,
 };

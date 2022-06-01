@@ -355,10 +355,3 @@ INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(10, 'img_country_syria', 's
 INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(10, 'img_country_thailand', 'sounds_country_thailand')
 INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(10, 'img_country_timorleste', 'sounds_country_timorleste')
 INSERT INTO DETAIL(id_big, dt_image, dt_sound)VALUES(10, 'img_country_uruguay', 'sounds_country_uruguay')
-
-
-Select * from BIGLIST
-
-Select * from ACCOUNTS
-
-Select * from ACCOUNTS

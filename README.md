@@ -28,9 +28,9 @@ POST: http://localhost:3001/api/v1/user/register
 - Truyền JSON vào <b>Body</b> với 3 tham số: <b>username</b>, <b>password</b>, <b>email</b>
 <pre>
 { 
-    username: 'user1',
-    password: '12345678',
-    email: 'user1@gmail.com'
+    "username": "user1",
+    "password": "12345678",
+    "email": "user1@gmail.com"
 }
 </pre>
 6. Đăng nhập người dùng <br>
@@ -38,17 +38,20 @@ POST: http://localhost:3001/api/v1/user/login
 - Truyền JSON vào <b>BODY</b> với 2 tham số: <b>username</b>, <b>password</b>
 <pre>
 { 
-    username: 'user1',
-    password: '12345678'
+    "username": "user1",
+    "password": "12345678"
 }
 </pre>
 7. Cấp lại access token cho người dùng sau khi hết hạn đăng nhập <br>
 POST: http://localhost:3001/api/v1/user/refresh
 - Yêu cầu có param <b>'x_authorization'</b> chứa access token (đã hết hạn) trong <b>Headers</b>
 - Truyền JSON vào <b>Body</b> với tham số <b>'refreshToken'</b> chứa refreshToken của user
-8. Lấy thông tin user:
+8. Lấy thông tin user: <br>
 GET: http://localhost:3001/api/v1/user/info
 - Yêu cầu có param <b>'x_authorization'</b> là accessToken được trả về sau khi đăng nhập thành công trong Header
+9. Kiểm tra accessToken có sử dụng được hay không <br>
+POST: http://localhost:3001/api/v1/user/checkExpiredToken
+- Yêu cầu có param <b>'x_authorization'</b> là accessToken
 
 Gửi access token sau khi đăng nhập thành công <br>
 -----
